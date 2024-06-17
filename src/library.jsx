@@ -150,7 +150,7 @@ function Library() {
   return (
    
     <div className="library-container">
-    <h1 className="">Library Management Project</h1>
+    <h1 className="">Library Management System</h1>
     {!account && (
       <div className="network-error">
         <p>Please connect to Sepolia network</p>
