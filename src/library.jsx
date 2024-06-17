@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import "./library.css";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import {
   Grid,
   Card,
@@ -11,6 +12,7 @@ import {
   Button,
   Rating,
 } from "@mui/material";
+
 import MetaMaskLogo from "../src/assets/metamask.png";
 import book1 from "../src/assets/book.jpg";
 import { contractAddress, contractABI } from "../src/constant";
@@ -19,7 +21,7 @@ const { ethereum } = window;
 function Library() {
   const [availableBooks, setAvailableBooks] = useState([]);
   const [borrowedBooks, setBorrowedBooks] = useState([]);
-  const [account, setAccount] = useState("");
+  const [account, setAccount] = useState(null); 
   const [value, setValue] = useState(0);
   const [bookId, setBookId] = useState("");
   const [copies, setCopies] = useState("");
@@ -73,7 +75,8 @@ function Library() {
         method: "eth_requestAccounts",
       });
 
-      setAccount(accounts[0]);
+      // setAccount(accounts[0]);
+      setAccount('ConnectedAccount'); 
       setMetaMaskConnected(true); 
       console.log("MetaMask connected. Connected account:", accounts[0]);
     } catch (error) {
@@ -147,20 +150,32 @@ function Library() {
   return (
    
     <div className="library-container">
-      <h1 className="">Library Management Project</h1>
+    <h1 className="">Library Management Project</h1>
+    {!account && (
       <div className="network-error">
         <p>Please connect to Sepolia network</p>
       </div>
-      <div className="metaMask-container">
-        {account ? (
-          <div>
-            <p>{account}</p>
-          </div>
-        ) : (
-          <Button
+    )}
+    <div className="metaMask-container">
+      {account ? (
+     <div className="no-network-error">
+     <p style={{ display: 'flex', alignItems: 'center' }}>
+       <CheckCircleIcon sx={{ fontSize: 25, color: '#4caf50', marginRight: 1 }} />
+       Account is connected Successfully
+     </p>
+   </div>
+      ) : (
+        <Button
           variant="contained"
           color="primary"
-          onClick={connectMetaMask}
+          onClick={() => {
+            connectMetaMask();
+            // Additional logic to hide network-error div
+            const networkErrorDiv = document.querySelector('.network-error');
+            if (networkErrorDiv) {
+              networkErrorDiv.style.display = 'none';
+            }
+          }}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -174,16 +189,16 @@ function Library() {
             textDecoration: 'none', // Ensure text decoration is removed
           }}
         >
-           <img
-              src={MetaMaskLogo}
-              alt="MetaMask Logo"
-              className="metamask-logo"
-              style={{
-                width: '24px',
-                height: '24px',
-                marginRight: '8px',
-              }}
-            />
+          <img
+            src={MetaMaskLogo}
+            alt="MetaMask Logo"
+            className="metamask-logo"
+            style={{
+              width: '24px',
+              height: '24px',
+              marginRight: '8px',
+            }}
+          />
           Connect MetaMask
         </Button>
         
