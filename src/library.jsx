@@ -206,7 +206,7 @@ function Library() {
       </div>{" "}
       <Divider style={{ marginTop: "30px" }}>
         {" "}
-        <h2>Add Book</h2>
+        <h2 className="h2">Add Book</h2>
       </Divider>{" "}
       <TextField
         label="Title"
@@ -250,7 +250,7 @@ function Library() {
         Add book
       </Button>
       <Divider style={{ marginTop: "30px" }}>
-        <h2>Only Book Owner Functionality</h2>
+        <h2 className="h2">Only Book Owner Functionality</h2>
       </Divider>{" "}
       <div style={{ marginTop: "30px" }}>
         <TextField
@@ -299,7 +299,7 @@ function Library() {
         </Button>
       </div>
       <Divider style={{ marginTop: "30px" }}>
-        <h2>Your Borrowed Books</h2>
+        <h2 className="h2">Your Borrowed Books</h2>
       </Divider>{" "}
       <div className="borrowed-books">
         {borrowedBooks.length > 0 && metaMaskConnected ? (
@@ -318,6 +318,8 @@ function Library() {
           {" "}
           <h2>Available Books</h2>
         </Divider>{" "}
+
+        {/* need some changes- */}
         <Grid container spacing={3} className="card-container">
           {availableBooks.map((book, index) => (
             <Grid item xs={12} key={index}>
@@ -329,13 +331,13 @@ function Library() {
                     </div>
                     <div className="details-section">
                       <div className="book-details">
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body1" color="text.secondary">
                           Book ID: {book.bookID.toString()}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body1" color="text.secondary">
                           Title: {book.title}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body1" color="text.secondary">
                           Author: {book.author}
                         </Typography>
                         <div className="rating">

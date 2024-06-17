@@ -13,6 +13,11 @@ body {
   margin: 0;
 }
 
+h1 {
+  color: #6c5ce7;
+  text-align: center;
+}
+
 .library-container {
   max-width: 1800px;
   margin: 20px auto;
@@ -90,6 +95,14 @@ body {
   margin-top: 40px;
 }
 
+.h2{
+  font-size: 1.7rem;
+  /* margin-bottom: 20px; */
+  color: #6c5ce7;
+  text-align: center;
+}
+
+
 .section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -106,6 +119,7 @@ body {
   border: none;
   border-radius: 8px;
   font-size: 1rem;
+  margin-bottom: 2px; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -161,6 +175,8 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
+
+
 
 .book-info {
   display: flex;
