@@ -1,137 +1,180 @@
-
+/* Global reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
 }
 
 .library-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
 }
 
 .title {
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #6c5ce7;
+}
+
+.network-error {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f1c40f;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metaMask-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.metaMask-container p {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.metaMask-container button {
+  display: flex;
+  align-items: center;
+  background-color: #6c5ce7;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.metaMask-container button:hover {
+  background-color: #4a3c8c;
 }
 
 .section {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6c5ce7;
+  text-align: center;
+}
+
+.action-button {
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #4a3c8c;
+}
+
+.add-book-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-book-form .MuiTextField-root {
+  margin-right: 10px;
+}
+
+.book-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.book-actions .MuiTextField-root {
+  margin-right: 10px;
+}
+
+.borrowed-books {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .card-container {
-  display: flex;
-
-
-  margin: 20px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
 .card {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff; 
-  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.card-content {
-  display: flex;
-  flex-direction: column;
-}
-.card-content p {
-  margin: 5px 0;
-  font-size: 16px;
-}
-
-.metamask-logo {
-  width: 34px; 
-  height: 34px; 
-  margin-right: 8px; 
-}
 .book-info {
   display: flex;
   align-items: center;
-  justify-content: center; 
-}
-
-.book-details {
-  margin-left: 20px; 
-  text-align: left; 
-}
-
-.extra-details {
-  display: flex;
-  justify-content: space-between; 
-  margin-top: 40px;
-}
-
-.left-column {
-  flex-grow: 3;
-  text-align: left; 
-}
-
-.right-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-}
-
-.actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-.details-content {
-  margin-top: 10px; 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
 }
 
 .image-section {
   margin-right: 20px;
 }
 
-
 .book-photo {
-  width: 100px; 
-  height: auto; 
-
-}
-
-
-.book-details > * {
-  margin-bottom: 5px; 
-}
-
-.action {
-  margin-bottom: 20px; 
-}
-
-.copies-input {
   width: 100px;
-  height: 25px; 
-  margin-right: 10px; 
+  height: auto;
+  border-radius: 8px;
 }
 
-.action-button {
-  width: 150px; 
-  height: 40px; 
+.book-details {
+  flex-grow: 1;
 }
 
-
-.action-button:hover {
-  background-color: #d3d3d3; 
-  color: #000; 
+.extra-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
+.left-column {
+  flex-grow: 1;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating {
+  /* Styles for rating component if needed */
+}

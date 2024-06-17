@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import "./library.css";
@@ -160,14 +157,37 @@ function Library() {
             <p>{account}</p>
           </div>
         ) : (
-          <Button variant="contained" color="primary" onClick={connectMetaMask}>
-            <img
-              src={MetaMaskLogo}
-              alt="MetaMask Logo"
-              className="metamask-logo"
-            />
-            Connect MetaMask
-          </Button>
+          <Button
+          variant="contained"
+          color="primary"
+          onClick={connectMetaMask}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            backgroundColor: '#6c5ce7',
+            color: '#fff',
+            padding: '12px 20px',
+            borderRadius: '8px',
+            fontSize: '1.2rem',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s ease',
+            textDecoration: 'none', // Ensure text decoration is removed
+          }}
+        >
+          <img
+            src={MetaMaskLogo}
+            alt="MetaMask Logo"
+            className="metamask-logo"
+            style={{
+              width: '24px',  // Adjust width as needed
+              height: '24px', // Adjust height as needed
+              marginRight: '8px', // Adjust logo margin if needed
+            }}
+          />
+          Connect MetaMask
+        </Button>
+        
+        
         )}
       </div>{" "}
       <Divider style={{ marginTop: "30px" }}>
