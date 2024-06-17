@@ -119,7 +119,7 @@ h1 {
   border: none;
   border-radius: 8px;
   font-size: 1rem;
-  margin-bottom: 2px; 
+  margin-bottom: 20px; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -200,7 +200,43 @@ h1 {
 .extra-details {
   display: flex;
   justify-content: space-between;
+  align-items: center; 
   margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* .extra-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  } */
+
+
+.extra-details .detail-item {
+  flex: 1;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.extra-details .detail-item:first-child {
+  text-align: left;
+}
+
+.extra-details .detail-item:last-child {
+  text-align: right;
+}
+
+.extra-details .detail-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.extra-details .detail-value {
+  color: #333;
 }
 
 .left-column {
@@ -211,6 +247,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2px;
   justify-content: center;
 }
 
