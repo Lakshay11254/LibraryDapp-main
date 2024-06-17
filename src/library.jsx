@@ -174,19 +174,18 @@ function Library() {
             textDecoration: 'none', // Ensure text decoration is removed
           }}
         >
-          <img
-            src={MetaMaskLogo}
-            alt="MetaMask Logo"
-            className="metamask-logo"
-            style={{
-              width: '24px',  // Adjust width as needed
-              height: '24px', // Adjust height as needed
-              marginRight: '8px', // Adjust logo margin if needed
-            }}
-          />
+           <img
+              src={MetaMaskLogo}
+              alt="MetaMask Logo"
+              className="metamask-logo"
+              style={{
+                width: '24px',
+                height: '24px',
+                marginRight: '8px',
+              }}
+            />
           Connect MetaMask
         </Button>
-        
         
         )}
       </div>{" "}
