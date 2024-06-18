@@ -1,8 +1,15 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* text-align: left; */
 }
 
 body {
@@ -14,14 +21,49 @@ body {
 }
 
 h1 {
-  color: #6c5ce7;
+  /* color: #6c5ce7; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5em;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
+h1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 .icon {
+  margin-right: 10px;
+  margin-top: 9px;
+  font-size: 1.1em;
+  color: #6c5ce7;
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover .icon {
+  transform: rotate(20deg) scale(1.2);
+  color: #a29bfe;
+}
+
+h1 .title {
+  flex-grow: 1;
+}
+
 .library-container {
-  max-width: 1800px;
+  max-width: auto;
   margin: 20px auto;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background-color: #ffffff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -30,7 +72,7 @@ h1 {
 }
 
 .library-container h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   color: #333;
 }
@@ -97,6 +139,7 @@ h1 {
 
 .h2{
   font-size: 1.7rem;
+  font-weight: bold ;
   /* margin-bottom: 20px; */
   color: #6c5ce7;
   text-align: center;
@@ -110,10 +153,17 @@ h1 {
   text-align: center;
 }
 
+.action{
+  margin-bottom: 3px;
+  
+}
+
 .action-button {
   width: 150px;
   height: 40px;
   margin-top: 10px;
+  margin-bottom: 2px;
+  margin: 10px 0 20px 0; 
   background-color: #6c5ce7;
   color: #fff;
   border: none;
@@ -127,6 +177,7 @@ h1 {
 .action-button:hover {
   background-color: #4a3c8c;
 }
+
 
 .add-book-form {
   display: flex;
@@ -181,6 +232,7 @@ h1 {
 .book-info {
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 .image-section {
@@ -197,9 +249,12 @@ h1 {
   flex-grow: 1;
 }
 
+
+
 .extra-details {
   display: flex;
   justify-content: space-between;
+  text-align: left;
   align-items: center; 
   margin-top: 10px;
   padding: 10px;

@@ -2,6 +2,7 @@ import  { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import "./library.css";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import {
   Grid,
   Card,
@@ -150,7 +151,7 @@ function Library() {
   return (
    
     <div className="library-container">
-    <h1 className="">Library Management System</h1>
+    <h1 className=""><LibraryBooksIcon className="icon"/>Library Management System</h1>
     {!account && (
       <div className="network-error">
         <p>Please connect to Sepolia network</p>
@@ -161,7 +162,7 @@ function Library() {
      <div className="no-network-error">
      <p style={{ display: 'flex', alignItems: 'center' }}>
        <CheckCircleIcon sx={{ fontSize: 25, color: '#4caf50', marginRight: 1 }} />
-       Account is connected Successfully
+       Your Account is connected Successfully
      </p>
    </div>
       ) : (
@@ -242,7 +243,7 @@ function Library() {
       />
       <Button
         variant="contained"
-        color="secondary"
+        color="primary"
         onClick={handleAddBook}
         className="action-button"
         disabled={!metaMaskConnected} 
@@ -271,7 +272,7 @@ function Library() {
         />
         <Button
           variant="contained"
-          color="secondary"
+          color="primary"
           onClick={handleReduceCopies}
           className="action-button"
           disabled={!metaMaskConnected} 
@@ -290,7 +291,7 @@ function Library() {
         />
         <Button
           variant="contained"
-          color="secondary"
+          color="primary"
           onClick={handleRemoveBook}
           className="action-button"
           disabled={!metaMaskConnected} 
@@ -426,14 +427,14 @@ function Library() {
                       </div>
                     </div>
                   </div>{" "}
-                  <Divider>Give Rating</Divider>{" "}
+                  <Divider className="h2">Give Ratings</Divider>{" "}
                   <Rating
                     name="simple-controlled"
                     value={value}
                     onChange={(event, newValue) =>
                       handleRatingChange(book.bookID, newValue)
                     }
-                    style={{ margin: "20px auto" }}
+                    style={{ margin: "20px auto", textAlign: "center", }}
                   />
                 </CardContent>
               </Card>
