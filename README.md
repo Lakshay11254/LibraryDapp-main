@@ -1,5 +1,8 @@
 # fabric-chaincode-demo
 
+# Project Description
+ Hyperledger Fabric's remarkable capabilities have the potential to redefine the landscape of library management, ushering in a new era of efficiency, security, and patron-centric innovation. By integrating this powerful blockchain platform, libraries can streamline their operations, safeguard their data, and provide an exceptional user experience that sets them apart in the digital age. As libraries embrace the transformative power of Hyperledger Fabric, they unlock a future where technology and trust converge, empowering them to better serve their communities and lead the way in the dynamic world of library management.
+
 # Team
 Tanuj Malhotra
 Nidhi Nakrani
