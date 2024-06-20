@@ -1,11 +1,5 @@
 # fabric-chaincode-demo
 
-# Team
-Tanuj Malhotra
-Nidhi Nakrani
-Jatin Deswal
-Lakshay Malhotra
-
 ## Part 1: Deploying and executing a chaincode
 
 Make sure fabric samples is installed along with the binaries. Check if the fabric-samples/bin folder contains all the binaries from Lab 1.
@@ -32,6 +26,9 @@ Channel 'mychannel' joined
 Now git clone the fabric-chaincode-demo from the lecture slides in the same folder as fabric-samples.
 ```
 cd ..
+```
+```
+git clone https://github.com/lley154/fabric-chaincode-demo 
 ```
 ```
 cd fabric-chaincode-demo  
@@ -180,15 +177,6 @@ http://localhost:5984/_utils/#login
 username: admin
 password: adminpw
 ```
-## Part 3: Running the frontend
-
-We first need to install the node modules 
-```
-npm install
-```
-To run the server
-```
-npm run dev
-
+For the lab report, provide screen shot of the DB view.
 
 
